@@ -9,11 +9,9 @@ export default createGlobalStyle`
     }
 
     body{
-        /* background-color: ${(props) => props.theme.whiteColor}; */
-        /* color: ${(props) => props.theme.blackColor}; */
         font-size:14px;
         font-family: 'Noto Sans KR', sans-serif;
-        color:${(props) => props.theme.darkBrownColor};
+        color:${(props) => props.theme.blackColor};
         line-height: 1.3;
         letter-spacing: .09em;
         font-weight:300;

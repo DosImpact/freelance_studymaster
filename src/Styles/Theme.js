@@ -11,7 +11,7 @@ const RED_COLOR = "#CE4C44";
 const YELLOW_COLOR = "#FBF9F7";
 const LIGHT_BRWON_COLOR = "#FBF9F7";
 
-const Theme =  {
+const Theme = {
   /* custom Color */
   whiteColor: `${WHITE_COLOR}`,
   blackColor: `${BLOCK_COLOR}`,
@@ -53,13 +53,3 @@ const Theme =  {
   },
 };
 export default Theme;
-// const example = `
-
-//   background-color: ${(props) => props.theme.brownColor};
-
-//   border-bottom: ${(props) => props.theme.borderDefault};
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//  `;

@@ -1,5 +1,5 @@
 import React from "react";
-import ProductImage from "components/Product/ProductImage";
+import ProductImage from "components/Legacy/Product/ProductImage";
 import styled from "styled-components";
 
 function ChooseImage({ className, formik, name, count, row = false }) {

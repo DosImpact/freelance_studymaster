@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { down } from "styled-breakpoints";
 
 // import TextArea from "components/TextArea";
-import Button from "components/Button";
-import StarRates from "components/StarRates";
+import Button from "components/Legacy/Button";
+import StarRates from "components/Legacy/StarRates";
 
 function ReviewSummary({ className, reviewsWrite }) {
   const { total, rates } = reviewsWrite;

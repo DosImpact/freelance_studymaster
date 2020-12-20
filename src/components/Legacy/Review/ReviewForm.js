@@ -4,11 +4,11 @@ import { FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
 import { down } from "styled-breakpoints";
 import styled from "styled-components";
 // import TextArea from "components/TextArea";
-import Input from "components/Input";
-import Button from "components/Button";
-import Box from "components/Box";
-import BoxButton from "components/BoxButton";
-import StarScore from "components/StarScore";
+import Input from "components/Legacy/Input";
+import Button from "components/Legacy/Button";
+import Box from "components/Legacy/Box";
+import BoxButton from "components/Legacy/BoxButton";
+import StarScore from "components/Legacy/StarScore";
 
 function ReviewForm({ className, formik }) {
   return (

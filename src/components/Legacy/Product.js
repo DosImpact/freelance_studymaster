@@ -10,17 +10,17 @@ import {
   FaAngleRight,
 } from "react-icons/fa";
 
-import Button from "components/Button";
-import Box from "components/Box";
+import Button from "components/Legacy/Button";
+import Box from "components/Legacy/Box";
 
-import ProductSection from "components/Product/ProductSection";
-import Production from "components/Product/Production";
-import ProductProfile from "components/Product/ProductProfile";
-import ChooseNumber from "components/Product/ChooseNumber";
-import ChooseCard from "components/Product/ChooseCard";
-import ChooseImageCard from "components/Product/ChooseImageCard";
+import ProductSection from "components/Legacy/Product/ProductSection";
+import Production from "components/Legacy/Product/Production";
+import ProductProfile from "components/Legacy/Product/ProductProfile";
+import ChooseNumber from "components/Legacy/Product/ChooseNumber";
+import ChooseCard from "components/Legacy/Product/ChooseCard";
+import ChooseImageCard from "components/Legacy/Product/ChooseImageCard";
 
-import ViewPlugin from "components/ViewPlugin/ViewPlugin";
+import ViewPlugin from "components/Legacy/ViewPlugin/ViewPlugin";
 import ScrollBox from "./Product/ScrollBox";
 
 function Product({ className, formik, editorFormik }) {

@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { down } from "styled-breakpoints";
 
-import StarRates from "components/StarRates";
+import StarRates from "components/Legacy/StarRates";
 
 function ProductProfile({ className, title, subTitle, price, total }) {
   return (

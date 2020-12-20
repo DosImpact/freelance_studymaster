@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { down, up } from "styled-breakpoints";
 import { FaCheckSquare } from "react-icons/fa";
 
-import Avatar from "components/Avatar";
-import StarRates from "components/StarRates";
-import UpDownVote from "components/Comment/UpDownVote";
-import ReadMore from "components/ReadMore";
+import Avatar from "components/Legacy/Avatar";
+import StarRates from "components/Legacy/StarRates";
+import UpDownVote from "components/Legacy/Comment/UpDownVote";
+import ReadMore from "components/Legacy/ReadMore";
 
 function Comment({
   className,

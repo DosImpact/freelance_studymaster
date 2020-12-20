@@ -4,7 +4,7 @@ import { down, up } from "styled-breakpoints";
 import { FaComment } from "react-icons/fa";
 // import { down } from "styled-breakpoints";
 
-import ChooseImage from "components/Product/ChooseImage";
+import ChooseImage from "components/Legacy/Product/ChooseImage";
 
 function ViewPlugin({ editorFormik }) {
   return (

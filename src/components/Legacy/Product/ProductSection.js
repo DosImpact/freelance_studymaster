@@ -4,7 +4,7 @@ import { FaAngleDown } from "react-icons/fa";
 import styled from "styled-components";
 import { down } from "styled-breakpoints";
 
-import Box from "components/Box";
+import Box from "components/Legacy/Box";
 
 function ProductSection({ className, idx, title, children }) {
   const [isDropped, setIsDropped] = useState(false);

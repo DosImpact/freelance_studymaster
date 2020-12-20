@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCardImage from "components/Product/ProductCardImage";
+import ProductCardImage from "components/Legacy/Product/ProductCardImage";
 
 import styled from "styled-components";
 

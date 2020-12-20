@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "components/Product/ProductCard";
+import ProductCard from "components/Legacy/Product/ProductCard";
 import styled from "styled-components";
 import { down } from "styled-breakpoints";
 

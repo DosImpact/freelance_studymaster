@@ -11,6 +11,11 @@ const RED_COLOR = "#CE4C44";
 const YELLOW_COLOR = "#FBF9F7";
 const LIGHT_BRWON_COLOR = "#FBF9F7";
 
+// study master
+
+const ORANGE_COLOR = "#fa6400";
+const BLUE_COLOR = "#0db7fa";
+
 const Theme = {
   /* custom Color */
   whiteColor: `${WHITE_COLOR}`,
@@ -23,6 +28,10 @@ const Theme = {
   redColor: `${RED_COLOR}`,
   yellowColor: `${YELLOW_COLOR}`,
   hoverGreyColor: `${HOVER_GREY_COLOR}`,
+
+  /* study master theme color */
+  orangeColor: `${ORANGE_COLOR}`,
+  blueColor: `${BLUE_COLOR}`,
 
   /* custom border */
   borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,

@@ -6,7 +6,7 @@ import Wrapper from "components/Wrapper";
 const Header = () => {
   return (
     <Container>
-      <Wrapper>
+      <Wrapper className="wrapper">
         <div className="row">
           <div className="logoItem">studymaster</div>
           <ul className="navItem">
@@ -24,5 +24,9 @@ const Container = styled.div`
   height: 72px;
   & .row {
     height: 100%;
+  }
+  & .wrapper {
+    height: 100%;
+    width: 100%;
   }
 `;

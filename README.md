@@ -28,6 +28,13 @@ yarn add react-icons
 yarn add gh-pages
 ```
 
+# TODO
+
+```
+🚀 footer 반응형
+
+```
+
 # components
 
 ## Layout

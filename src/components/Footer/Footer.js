@@ -1,4 +1,5 @@
 import React from "react";
+import { down } from "styled-breakpoints";
 import styled from "styled-components";
 
 const Footer = () => {
@@ -39,7 +40,10 @@ export default Footer;
 const Container = styled.div`
   background-color: ${(props) => props.theme.GreyColor1};
   min-height: 227px;
-  height: 227px;
+
+  ${down("sm")}  {
+    padding-bottom: 68px;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -47,13 +51,16 @@ const InnerContainer = styled.div`
   max-width: 1130px;
   padding: 0 30px;
   width: 100%;
-  height: 100%;
 
   & .row {
     display: flex;
     flex-flow: row nowrap;
-    height: 100%;
+    /* height: 100%; */
     justify-content: space-between;
+
+    ${down("sm")}  {
+      flex-flow: column wrap;
+    }
 
     & .profile {
       margin-top: 55px;
@@ -61,11 +68,11 @@ const InnerContainer = styled.div`
       color: ${(props) => props.theme.GreyColor2};
       .profileName {
         font-size: 20px;
+        margin-bottom: 15px;
       }
       .profileList {
-        margin-top: 10px;
+        margin-top: 4px;
         font-size: 16px;
-        line-height: 1.5;
       }
     }
     & .navGrid {

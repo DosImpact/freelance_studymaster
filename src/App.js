@@ -17,17 +17,15 @@ import StudyPostContainer from "routes/StudyPost/StudyPostContainer";
 // 3. 내스터디        mystudy
 // 4. 마이 페이지     mypage
 
-import Footer from "components/Footer/Footer";
-import Header from "components/Header/Header";
+import Footer from "components/common/Footer";
+import Header from "components/common/Header";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/auth">
-          <Route exact path="/auth/1" component={AuthContainer} />
-        </Route>
+        <Route exact path="/auth" component={AuthContainer}></Route>
         <Route exact path="/" component={MainContainer}></Route>
 
         <Route exact path="/studypost" component={StudyPostContainer}></Route>

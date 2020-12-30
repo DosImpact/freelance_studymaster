@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Login from "./section/Login";
 
 const AuthPresenter = () => {
-    return (
-        <div>
-            AuthPresenter
-        </div>
-    )
-}
+  return (
+    <div>
+      <Login />
+    </div>
+  );
+};
 
-export default AuthPresenter
+export default AuthPresenter;

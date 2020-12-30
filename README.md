@@ -1,7 +1,18 @@
-#
+# 파일 구조
+
+```
+routes
+Auth : (Onboarding) 로그인,회원가입,프로필 등록
+
+components
+Header : 헤더 공통 사용
+Footer : 푸터 공통 사용
 
 ```
 
+# 설치된 패키지
+
+```
 yarn add react-router-dom
 
 yarn add formik

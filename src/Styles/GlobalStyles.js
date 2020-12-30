@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import Theme from "./Theme";
 import reset from "styled-reset";
 
 export default createGlobalStyle`
@@ -9,12 +10,7 @@ export default createGlobalStyle`
     }
 
     body{
-        font-size:14px;
         font-family: 'Noto Sans KR', sans-serif;
-        color:${(props) => props.theme.blackColor};
-        line-height: 1.3;
-        letter-spacing: .09em;
-        font-weight:300;
     }
     a {
         color:${(props) => props.theme.blackColor};
@@ -23,6 +19,11 @@ export default createGlobalStyle`
     input:focus{
         outline:none;
     }
+
+    .mainColor{
+        ${Theme.ColorMain};
+    }
+    /* unused */
     .black{
         color:${(props) => props.theme.blackColor};
     } 

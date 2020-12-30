@@ -15,7 +15,7 @@ const Header = () => {
             <li className="itemList">스터디 찾기</li>
             <li className="itemList">내 스터디</li>
             <li className="itemList">회원가입</li>
-            <li className="itemList">로그인</li>
+            <li className="itemList mainColor">로그인</li>
           </ul>
         </div>
       </InnerContainer>
@@ -51,6 +51,9 @@ const InnerContainer = styled.div`
       color:  ${(props) => props.theme.GreyColor2};
       & .itemList {
         margin-right: 24px;
+        font-family: SpoqaHanSans;
+        font-size: 14px;
+        letter-spacing: -0.47px;
       }
     }
   }

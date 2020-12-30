@@ -29,16 +29,21 @@ const BLUE_COLOR_LIGHT_ = "#65d1fc";
 const BLUE_COLOR = "#0db7fa";
 const BLUE_COLOR_DARK = "#009fde";
 
-const MAIN_COLOR_LIGHT_ = "#F7F7F7";
-const MAIN_COLOR = "#6d7278";
-const MAIN_COLOR_DARK = "#6D6D6D";
+const MAIN_COLOR_LIGHT_ = ORANGE_COLOR_LIGHT;
+const MAIN_COLOR = ORANGE_COLOR;
+const MAIN_COLOR_DARK = ORANGE_COLOR_DARK;
 
 // mixin
 
-const flexH = css`
-  display: flex;
-  flex-flow: row nowrap;
-`;
+const Mixin = {
+  flexH: css`
+    display: flex;
+    flex-flow: row nowrap;
+  `,
+  ColorMain: css`
+    color: ${MAIN_COLOR};
+  `,
+};
 
 const Theme = {
   whiteColor: `${WHITE_COLOR}`,
@@ -74,9 +79,9 @@ const Theme = {
 
   // colors
 
-  MainColor1: `${ORANGE_COLOR_LIGHT}`,
-  MainColor2: `${ORANGE_COLOR}`,
-  MainColor3: `${ORANGE_COLOR_DARK}`,
+  MainColor1: `${MAIN_COLOR_LIGHT_}`,
+  MainColor2: `${MAIN_COLOR}`,
+  MainColor3: `${MAIN_COLOR_DARK}`,
 
   GreyColor1: `${GREY_COLOR_LIGHT}`,
   GreyColor2: `${GREY_COLOR}`,
@@ -98,8 +103,8 @@ const Theme = {
     lg: "992px",
     xl: "1200px",
   },
-
-  // mixin
-  flexH,
 };
-export default Theme;
+
+const FTheme = { ...Theme, ...Mixin };
+
+export default FTheme;

@@ -86,6 +86,7 @@ const Theme = {
   GreyColor1: `${GREY_COLOR_LIGHT}`,
   GreyColor2: `${GREY_COLOR}`,
   GreyColor3: `${GREY_COLOR_DARK}`,
+  ColorPlaceHolder: `#bbbbbb`,
   /* study master theme color */
   orangeColor: `${ORANGE_COLOR}`,
   blueColor: `${BLUE_COLOR}`,

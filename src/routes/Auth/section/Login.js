@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import TextInput from "components/common/Inputs/TextInput";
+
 const Login = () => {
   return (
     <Container>
@@ -13,10 +15,10 @@ const Login = () => {
               전화번호<span className="mainColor">*</span>
             </div>
             <div className="row">
-              <input
+              <TextInput
                 className="textinput"
                 placeholder="전화번호를 인증해주세요"
-              ></input>
+              />
               <button>인증번호 받기</button>
             </div>
           </div>

@@ -25,7 +25,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/auth" component={AuthContainer}></Route>
+        <Route exact path="/auth">
+          <Route exact path="/auth/1" component={AuthContainer} />
+        </Route>
         <Route exact path="/" component={MainContainer}></Route>
 
         <Route exact path="/studypost" component={StudyPostContainer}></Route>

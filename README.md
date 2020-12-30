@@ -3,8 +3,8 @@
 ```
 public/assets/ : 사진들
 
-routes
-Auth : (Onboarding) 로그인,회원가입,프로필 등록
+routes/Auth :
+routes/Auth/section : (Onboarding) 로그인,회원가입,프로필 등록
 
 components
 Header : 헤더 공통 사용

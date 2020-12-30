@@ -1,6 +1,8 @@
 # 파일 구조
 
 ```
+public/assets/ : 사진들
+
 routes
 Auth : (Onboarding) 로그인,회원가입,프로필 등록
 

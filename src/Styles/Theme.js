@@ -1,4 +1,6 @@
-/* custom */
+import { css } from "styled-components";
+
+//  contant
 
 // unused
 
@@ -13,42 +15,40 @@ const RED_COLOR = "#CE4C44";
 const YELLOW_COLOR = "#FBF9F7";
 const LIGHT_BRWON_COLOR = "#FBF9F7";
 
-// used
+// study master ------------------------------------------ used
 
-const LIGHT_GREY_COLOR = "#F7F7F7";
+const GREY_COLOR_LIGHT = "#F7F7F7";
 const GREY_COLOR = "#6d7278";
-const DARK_GREY_COLOR = "#6D6D6D";
+const GREY_COLOR_DARK = "#6D6D6D";
 
-// study master ------------------------------------------
-
+const ORANGE_COLOR_LIGHT = "#ff9f5e";
 const ORANGE_COLOR = "#fa6400";
-const BLUE_COLOR = "#0db7fa";
+const ORANGE_COLOR_DARK = "#fa6400";
 
-// footer color
+const BLUE_COLOR_LIGHT_ = "#65d1fc";
+const BLUE_COLOR = "#0db7fa";
+const BLUE_COLOR_DARK = "#009fde";
+
+const MAIN_COLOR_LIGHT_ = "#F7F7F7";
+const MAIN_COLOR = "#6d7278";
+const MAIN_COLOR_DARK = "#6D6D6D";
+
+// mixin
+
+const flexH = css`
+  display: flex;
+  flex-flow: row nowrap;
+`;
 
 const Theme = {
-  /* custom Color */
   whiteColor: `${WHITE_COLOR}`,
   blackColor: `${BLOCK_COLOR}`,
   lightBrownColor: `${LIGHT_BRWON_COLOR}`,
   brownColor: `${BRWON_COLOR}`,
   darkBrownColor: `${DARK_BROWN_COLOR}`,
+
   greyColor: `${GREY_COLOR}`,
-
-  redColor: `${RED_COLOR}`,
-  yellowColor: `${YELLOW_COLOR}`,
-  hoverGreyColor: `${HOVER_GREY_COLOR}`,
-
-  // used
-  GreyColor1: `${LIGHT_GREY_COLOR}`,
-  GreyColor2: `${GREY_COLOR}`,
-  GreyColor3: `${DARK_GREY_COLOR}`,
-  /* study master theme color */
-  orangeColor: `${ORANGE_COLOR}`,
-  blueColor: `${BLUE_COLOR}`,
-
-  /* custom border */
-  borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,
+  borderDefault: `1px solid ${GREY_COLOR_LIGHT};`,
   borderBrownTransparent: `2px solid transparent`,
   borderBrown: `2px solid ${BRWON_COLOR};`,
   borderBrownDefault: `4px solid transparent;`,
@@ -59,17 +59,38 @@ const Theme = {
   borderBrownHover1px: `1px solid ${GERY_BROWN_COLOR};`,
   borderBrownStrong1px: `1px solid ${BRWON_COLOR};`,
 
+  redColor: `${RED_COLOR}`,
+  yellowColor: `${YELLOW_COLOR}`,
+  hoverGreyColor: `${HOVER_GREY_COLOR}`,
+
+  /* custom border */
   borderRed: `1px solid ${RED_COLOR};`,
   borderRadius: "30px",
-  boxBorder: `1px solid ${LIGHT_GREY_COLOR}`,
+  boxBorder: `1px solid ${GREY_COLOR_LIGHT}`,
+
+  /* custom Color */
+
+  // study master ==================== used ====================
+
+  // colors
+
+  MainColor1: `${ORANGE_COLOR_LIGHT}`,
+  MainColor2: `${ORANGE_COLOR}`,
+  MainColor3: `${ORANGE_COLOR_DARK}`,
+
+  GreyColor1: `${GREY_COLOR_LIGHT}`,
+  GreyColor2: `${GREY_COLOR}`,
+  GreyColor3: `${GREY_COLOR_DARK}`,
+  /* study master theme color */
+  orangeColor: `${ORANGE_COLOR}`,
+  blueColor: `${BLUE_COLOR}`,
 
   /**shadow */
-  boxShadow: `0 0 2px 0.5px rgba(21, 21, 21, 0.05),0 1px 5px 0 rgba(21, 21, 21, 0.15)`,
+  boxShadow: `box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);`,
 
-  // study master ------------------------------------------
+  // layout
 
   /*breakpoints */
-
   breakpoints: {
     xs: "0px",
     sm: "576px",
@@ -77,5 +98,8 @@ const Theme = {
     lg: "992px",
     xl: "1200px",
   },
+
+  // mixin
+  flexH,
 };
 export default Theme;

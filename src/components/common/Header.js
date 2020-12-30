@@ -1,21 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <Container>
       <InnerContainer className="wrapper">
         <div className="row">
-          <img
-            alt="logo"
-            className="logoItem"
-            src={process.env.PUBLIC_URL + "assets/logo.png"}
-          ></img>
+          <Link to="/">
+            <img
+              alt="logo"
+              className="logoItem"
+              src={process.env.PUBLIC_URL + "assets/logo.png"}
+            ></img>
+          </Link>
           <ul className="navItem">
-            <li className="itemList">스터디 찾기</li>
-            <li className="itemList">내 스터디</li>
-            <li className="itemList">회원가입</li>
-            <li className="itemList mainColor w7">로그인</li>
+            <Link to="/search">
+              <li className="itemList">스터디 찾기</li>
+            </Link>
+            <Link to="/mystudy">
+              <li className="itemList">내 스터디</li>
+            </Link>
+            <Link to="/auth">
+              <li className="itemList">회원가입</li>
+            </Link>
+            <Link to="/auth">
+              <li className="itemList mainColor w7">로그인</li>
+            </Link>
           </ul>
         </div>
       </InnerContainer>

@@ -11,11 +11,11 @@ const HOVER_GREY_COLOR = "#F8F8F8";
 const GERY_BROWN_COLOR = "#AAAAAA";
 const BRWON_COLOR = "#AFA196";
 const DARK_BROWN_COLOR = "#676564";
-const RED_COLOR = "#CE4C44";
 const YELLOW_COLOR = "#FBF9F7";
 const LIGHT_BRWON_COLOR = "#FBF9F7";
 
 // study master ------------------------------------------ used
+const RED_COLOR = "#e02020";
 
 const GREY_COLOR_LIGHT = "#F7F7F7";
 const GREY_COLOR = "#6d7278";
@@ -25,17 +25,23 @@ const ORANGE_COLOR_LIGHT = "#ff9f5e";
 const ORANGE_COLOR = "#fa6400";
 const ORANGE_COLOR_DARK = "#fa6400";
 
-const BLUE_COLOR_LIGHT_ = "#65d1fc";
+const BLUE_COLOR_LIGHT = "#65d1fc";
 const BLUE_COLOR = "#0db7fa";
 const BLUE_COLOR_DARK = "#009fde";
 
-const MAIN_COLOR_LIGHT_ = ORANGE_COLOR_LIGHT;
+const MAIN_COLOR_LIGHT = ORANGE_COLOR_LIGHT;
 const MAIN_COLOR = ORANGE_COLOR;
 const MAIN_COLOR_DARK = ORANGE_COLOR_DARK;
 
-// mixin
+// mixin ColorMixin
 
-const Mixin = {
+const ColorMixin = {
+  ColorMain: css`
+    color: ${MAIN_COLOR};
+  `,
+};
+// mixin LayoutMixin
+const LayoutMixin = {
   flexH: css`
     display: flex;
     flex-flow: row nowrap;
@@ -54,19 +60,18 @@ const Mixin = {
     flex-flow: column nowrap;
     align-items: center;
   `,
+};
 
-  ColorMain: css`
-    color: ${MAIN_COLOR};
-  `,
-
+// mixin ComponentMixin
+const ComponentMixin = {
   ButtonNormal: css`
     border: solid 1px rgba(109, 114, 120, 0.1);
     color: rgba(0, 0, 0, 0.25);
   `,
   ButtonAble: css`
-    background-color: white;
+    background-color: ${MAIN_COLOR};
     border: solid 1px ${MAIN_COLOR};
-    color: ${MAIN_COLOR};
+    color: white;
   `,
   ButtonDisable: css`
     border: solid 1px rgba(109, 114, 120, 0.1);
@@ -94,22 +99,17 @@ const Theme = {
   borderBrownHover1px: `1px solid ${GERY_BROWN_COLOR};`,
   borderBrownStrong1px: `1px solid ${BRWON_COLOR};`,
 
-  redColor: `${RED_COLOR}`,
   yellowColor: `${YELLOW_COLOR}`,
   hoverGreyColor: `${HOVER_GREY_COLOR}`,
-
-  /* custom border */
-  borderRed: `1px solid ${RED_COLOR};`,
-  borderRadius: "30px",
-  boxBorder: `1px solid ${GREY_COLOR_LIGHT}`,
 
   /* custom Color */
 
   // study master ==================== used ====================
 
   // colors
+  RedColor: `${RED_COLOR}`,
 
-  MainColor1: `${MAIN_COLOR_LIGHT_}`,
+  MainColor1: `${MAIN_COLOR_LIGHT}`,
   MainColor2: `${MAIN_COLOR}`,
   MainColor3: `${MAIN_COLOR_DARK}`,
 
@@ -124,6 +124,9 @@ const Theme = {
   /**shadow */
   boxShadow: `box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);`,
 
+  //border
+  borderMain: `1px solid ${MAIN_COLOR};`,
+
   // layout
 
   /*breakpoints */
@@ -136,6 +139,6 @@ const Theme = {
   },
 };
 
-const FTheme = { ...Theme, ...Mixin };
+const FTheme = { ...Theme, ...ColorMixin, ...LayoutMixin, ...ComponentMixin };
 
 export default FTheme;

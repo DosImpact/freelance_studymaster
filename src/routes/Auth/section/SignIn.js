@@ -16,11 +16,11 @@ const Login = () => {
     },
     validationSchema: Yup.object().shape({
       email: Yup.string()
-        .email("이메일 주소를 확인해주세요")
-        .required("이메일 주소가 필요합니다."),
-      ph: Yup.string().required("전화 번호가 필요합니다."),
+        .email("* 이메일 주소를 확인해주세요")
+        .required("* 이메일 주소가 필요합니다."),
+      ph: Yup.string().required("* 전화 번호가 필요합니다."),
       phValid: Yup.string(),
-      nickname: Yup.string().required("닉네임이 필요합니다."),
+      nickname: Yup.string().required("* 닉네임이 필요합니다."),
     }),
   });
 
@@ -51,6 +51,22 @@ const Login = () => {
                   text="인증번호 받기"
                 ></Button>
               </div>
+              <div className="row">
+                <TextInput
+                  className="textinput"
+                  placeholder="인증번호를 입력해주세요."
+                  id="phValid"
+                  value={formik.values.phValid}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                <Button
+                  variant="normal"
+                  className="button"
+                  type="button"
+                  text="확인"
+                ></Button>
+              </div>
             </div>
 
             <div className="section email">
@@ -66,6 +82,11 @@ const Login = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 />
+              </div>
+              <div className="row">
+                {formik.errors.email && formik.touched.email && (
+                  <div className="errorMsg">{formik.errors.email}</div>
+                )}
               </div>
             </div>
 
@@ -88,6 +109,11 @@ const Login = () => {
                   text="중복확인"
                 ></Button>
               </div>
+              <div className="row">
+                {formik.errors.nickname && formik.touched.nickname && (
+                  <div className="errorMsg">{formik.errors.nickname}</div>
+                )}
+              </div>
             </div>
 
             <div className="notice">
@@ -102,10 +128,10 @@ const Login = () => {
                 className="button"
                 text="회원가입"
                 type="submit"
-                variant="disable"
+                variant={formik.dirty && formik.isValid ? "able" : "disable"}
                 disabled={formik.isSubmitting}
               ></Button>
-              {formik.dirty && formik.isValid && "제출가능"}
+              {/* <pre>{JSON.stringify(formik, null, 2)}</pre> */}
             </div>
           </form>
         </div>
@@ -149,6 +175,12 @@ const InnerContainer = styled.div`
         }
         .button {
           margin-left: 12px;
+        }
+        .errorMsg {
+          font-size: 12px;
+          letter-spacing: -0.12px;
+          text-align: right;
+          color: #e02020;
         }
       }
     }

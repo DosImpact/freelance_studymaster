@@ -10,6 +10,9 @@ components
 Header : 헤더 공통 사용
 Footer : 푸터 공통 사용
 
+components/common/inputs/button : 버튼 컴포넌트
+- variant : normal, disable, able
+
 ```
 
 # 설치된 패키지

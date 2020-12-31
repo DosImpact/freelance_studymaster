@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 // 일반 입력
-const TextInput = ({ className, children, ...props }) => {
+// variant : normal, disable, able
+
+const TextInput = ({ className, variant = "normal", children, ...props }) => {
   return (
-    <Input className={className} {...props}>
+    <Input className={className} variant={variant} {...props}>
       {children}
     </Input>
   );
@@ -20,7 +22,14 @@ const Input = styled.input`
   padding: 7px;
   min-height: 36px;
 
+  ${(props) => props.variant === "normal" && props.theme.ButtonNormal}
+  ${(props) => props.variant === "able" && props.theme.ButtonAble}
+  ${(props) => props.variant === "disable" && props.theme.ButtonDisable}
+  
   &::placeholder {
     color: ${(props) => props.theme.ColorPlaceHolder};
+  }
+  &:focus {
+    border: ${(props) => props.theme.borderMain};
   }
 `;

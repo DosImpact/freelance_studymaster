@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // 일반 입력
 // variant : normal, disable, able
+//
 const SButton = ({ className, variant = "normal", text, ...props }) => {
   return (
     <Button className={className} variant={variant} {...props}>
@@ -26,19 +27,8 @@ const Button = styled.button`
   cursor: pointer;
 
   border: solid 1px #d8d8d8;
+
   ${(props) => props.variant === "normal" && props.theme.ButtonNormal}
   ${(props) => props.variant === "able" && props.theme.ButtonAble}
   ${(props) => props.variant === "disable" && props.theme.ButtonDisable}
-
-  & [variant="normal"] {
-    color: ${(props) => props.theme.ColorPlaceHolder};
-    color: red;
-  }
-  & [variant="disable"] {
-    background-color: rgba(0, 0, 0, 0.04);
-  }
-  & [variant="able"] {
-    color: ${(props) => props.theme.ColorPlaceHolder};
-    color: blue;
-  }
 `;

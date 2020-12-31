@@ -11,7 +11,6 @@ const HOVER_GREY_COLOR = "#F8F8F8";
 const GERY_BROWN_COLOR = "#AAAAAA";
 const BRWON_COLOR = "#AFA196";
 const DARK_BROWN_COLOR = "#676564";
-const YELLOW_COLOR = "#FBF9F7";
 const LIGHT_BRWON_COLOR = "#FBF9F7";
 
 // study master ------------------------------------------ used
@@ -21,6 +20,10 @@ const GREY_COLOR_LIGHT = "#F7F7F7";
 const GREY_COLOR = "#6d7278";
 const GREY_COLOR_DARK = "#6D6D6D";
 
+const YELLOW_COLOR_LIGHT = "#fff9e3";
+const YELLOW_COLOR = "#FFC700";
+const YELLOW_COLOR_DARK = "#FFA800";
+
 const ORANGE_COLOR_LIGHT = "#ff9f5e";
 const ORANGE_COLOR = "#fa6400";
 const ORANGE_COLOR_DARK = "#fa6400";
@@ -29,9 +32,11 @@ const BLUE_COLOR_LIGHT = "#65d1fc";
 const BLUE_COLOR = "#0db7fa";
 const BLUE_COLOR_DARK = "#009fde";
 
-const MAIN_COLOR_LIGHT = ORANGE_COLOR_LIGHT;
-const MAIN_COLOR = ORANGE_COLOR;
-const MAIN_COLOR_DARK = ORANGE_COLOR_DARK;
+// mainColor 3가지 변경시 - theme 변경
+
+const MAIN_COLOR_LIGHT = YELLOW_COLOR_LIGHT;
+const MAIN_COLOR = YELLOW_COLOR;
+const MAIN_COLOR_DARK = YELLOW_COLOR_DARK;
 
 // mixin ColorMixin
 

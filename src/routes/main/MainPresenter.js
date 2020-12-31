@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Panel from "./section/Panel";
 
 const MainPresenter = () => {
-    return (
-        <div>
-            MainPresenter
-        </div>
-    )
-}
+  return (
+    <div>
+      <Panel />
+    </div>
+  );
+};
 
-export default MainPresenter
+export default MainPresenter;

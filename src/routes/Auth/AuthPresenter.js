@@ -1,6 +1,8 @@
 import React from "react";
 import Login from "./section/Login";
 import SignIn from "./section/SignIn";
+import Profile from "./section/Profile";
+
 const AuthPresenter = () => {
   return (
     <div>
@@ -11,6 +13,8 @@ const AuthPresenter = () => {
         - formik을 이용해서 error 메시지 확인 가능합니다.
       */}
       <SignIn />
+
+      <Profile />
     </div>
   );
 };

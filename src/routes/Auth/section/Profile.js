@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
-import { Button, TextInput } from "components/common/Inputs/index";
+import {
+  Button,
+  TextInput,
+  DropDownButton,
+} from "components/common/Inputs/index";
 
 const Login = () => {
   // const formik = useFormik({
@@ -34,30 +38,21 @@ const Login = () => {
                 공인 영어 점수<span className="mainColor"> *</span>
               </div>
               <div className="row">
+                <DropDownButton
+                  variant="normal"
+                  className="button"
+                  text="공인 영어"
+                >
+                  <DropDownButton.Item>TOEIC</DropDownButton.Item>
+                  <DropDownButton.Item>TOEIC Speaking</DropDownButton.Item>
+                  <DropDownButton.Item>TEPS</DropDownButton.Item>
+                </DropDownButton>
+
                 <TextInput
                   className="textinput"
                   placeholder="전화번호를 인증해주세요"
                   id="ph"
                 />
-                <Button
-                  variant="normal"
-                  className="button"
-                  type="button"
-                  text="인증번호 받기"
-                ></Button>
-              </div>
-              <div className="row">
-                <TextInput
-                  className="textinput"
-                  placeholder="인증번호를 입력해주세요."
-                  id="phValid"
-                />
-                <Button
-                  variant="normal"
-                  className="button"
-                  type="button"
-                  text="확인"
-                ></Button>
               </div>
             </div>
 

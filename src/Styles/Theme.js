@@ -65,6 +65,11 @@ const LayoutMixin = {
     flex-flow: column nowrap;
     align-items: center;
   `,
+  centering: css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `,
 };
 
 // mixin ComponentMixin

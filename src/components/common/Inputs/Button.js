@@ -2,9 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 // 일반 입력
-const SButton = ({ className, text, ...props }) => {
+// variant : normal, disable, able
+const SButton = ({ className, variant = "normal", text, ...props }) => {
   return (
-    <Button className={className} {...props}>
+    <Button className={className} variant={variant} {...props}>
+      {/* <div variant={variant}>hahah</div> */}
       {text}
     </Button>
   );
@@ -16,11 +18,27 @@ const Button = styled.button`
   all: unset;
   box-sizing: border-box;
 
+  text-align: center;
   min-height: 36px;
   padding: 0px 4px;
   border-radius: 6px;
-  border: solid 1px #d8d8d8;
   font-size: 14px;
-  color: ${(props) => props.theme.ColorPlaceHolder};
   cursor: pointer;
+
+  border: solid 1px #d8d8d8;
+  ${(props) => props.variant === "normal" && props.theme.ButtonNormal}
+  ${(props) => props.variant === "able" && props.theme.ButtonAble}
+  ${(props) => props.variant === "disable" && props.theme.ButtonDisable}
+
+  & [variant="normal"] {
+    color: ${(props) => props.theme.ColorPlaceHolder};
+    color: red;
+  }
+  & [variant="disable"] {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  & [variant="able"] {
+    color: ${(props) => props.theme.ColorPlaceHolder};
+    color: blue;
+  }
 `;

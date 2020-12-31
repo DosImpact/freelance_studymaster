@@ -45,6 +45,16 @@ const Mixin = {
     flex-flow: row nowrap;
     align-items: center;
   `,
+  flexV: css`
+    display: flex;
+    flex-flow: column nowrap;
+  `,
+  flexVC: css`
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  `,
+
   ColorMain: css`
     color: ${MAIN_COLOR};
   `,

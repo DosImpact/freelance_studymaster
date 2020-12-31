@@ -22,10 +22,10 @@ const Input = styled.input`
   padding: 7px;
   min-height: 36px;
 
-  ${(props) => props.variant === "normal" && props.theme.ButtonNormal}
-  ${(props) => props.variant === "able" && props.theme.ButtonAble}
-  ${(props) => props.variant === "disable" && props.theme.ButtonDisable}
-  
+  ${(props) => props.variant === "normal" && props.theme.TextInputNormal}
+  ${(props) => props.variant === "able" && props.theme.TextInputAble}
+  ${(props) => props.variant === "disable" && props.theme.TextInputDisable}
+
   &::placeholder {
     color: ${(props) => props.theme.ColorPlaceHolder};
   }

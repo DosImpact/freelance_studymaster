@@ -78,6 +78,19 @@ const ComponentMixin = {
     background-color: rgba(0, 0, 0, 0.04);
     color: rgba(0, 0, 0, 0.25);
   `,
+  TextInputNormal: css`
+    border: solid 1px rgba(109, 114, 120, 0.1);
+  `,
+  TextInputAble: css`
+    background-color: ${MAIN_COLOR};
+    border: solid 1px ${MAIN_COLOR};
+    color: white;
+  `,
+  TextInputDisable: css`
+    border: solid 1px rgba(109, 114, 120, 0.1);
+    background-color: rgba(0, 0, 0, 0.04);
+    color: rgba(0, 0, 0, 0.25);
+  `,
 };
 
 const Theme = {

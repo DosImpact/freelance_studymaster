@@ -69,6 +69,7 @@ const Login = () => {
               </div>
             </div>
 
+            {/* variant="disable" 는 비활성화 입니다. */}
             <div className="section email">
               <div className="name">
                 이메일<span className="mainColor"> *</span>
@@ -81,12 +82,18 @@ const Login = () => {
                   value={formik.values.email}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
+                  variant="disable"
                 />
               </div>
               <div className="row">
                 {formik.errors.email && formik.touched.email && (
                   <div className="errorMsg">{formik.errors.email}</div>
                 )}
+              </div>
+              <div className="row">
+                <div className="errorMsg">
+                  {"* 중복된 이메일 주소입니다. 이메일 주소를 확인해주세요."}
+                </div>
               </div>
             </div>
 

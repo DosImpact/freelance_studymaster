@@ -49,7 +49,7 @@ const Container = styled.div`
 
 const InnerContainer = styled.div`
   margin: 0 auto;
-  max-width: 1220px;
+  max-width: 1240px;
   width: 100%;
   padding: 0 30px;
   height: 100%;

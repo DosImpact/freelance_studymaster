@@ -1,6 +1,7 @@
 import React from "react";
 import GridCard from "./section/GridCard";
 import Panel from "./section/Panel";
+import Privacy from "./section/Privacy";
 
 const MainPresenter = () => {
   const dummyData = [
@@ -42,6 +43,7 @@ const MainPresenter = () => {
         // more={"전체보기"}
         moreRoute={`${process.env.PUBLIC_URL}+"/`}
       />
+      <Privacy />
     </div>
   );
 };

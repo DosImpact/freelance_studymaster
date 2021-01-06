@@ -22,14 +22,22 @@ const SDropDownButton = ({
 };
 
 const Item = ({ children, ...props }) => {
-  return <li {...props}>{children}</li>;
+  return <Li {...props}>{children}</Li>;
 };
 
 SDropDownButton.Item = Item;
 
 export default SDropDownButton;
 
-const Button = styled.button``;
+const Button = styled.button`
+  &::after {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    content: "▿";
+    right: 15px;
+  }
+`;
 
 const Container = styled.div`
   position: relative;
@@ -38,9 +46,9 @@ const Container = styled.div`
     all: unset;
     box-sizing: border-box;
 
-    text-align: center;
+    text-align: start;
     min-height: 36px;
-    padding: 0px 4px;
+    padding-left: 15px;
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
@@ -71,14 +79,19 @@ const Container = styled.div`
     visibility: hidden;
     /* pointer-events: none; */
     border-radius: 5px;
+    z-index: 10;
+  }
+`;
 
-    li {
-      min-height: 36px;
-      ${(props) => props.theme.centering};
-      cursor: pointer;
-      &:hover {
-        background-color: rgba(109, 114, 120, 0.1);
-      }
-    }
+const Li = styled.li`
+  ${(props) => props.theme.centering};
+  min-height: 36px;
+  height: max-content;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: rgba(109, 114, 120, 0.1);
   }
 `;

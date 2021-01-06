@@ -88,6 +88,10 @@ const ComponentMixin = {
     background-color: rgba(0, 0, 0, 0.04);
     color: rgba(0, 0, 0, 0.25);
   `,
+  ButtonOutline: css`
+    color: ${MAIN_COLOR_DARK};
+    border: solid 1px ${MAIN_COLOR_DARK};
+  `,
   TextInputNormal: css`
     border: solid 1px rgba(109, 114, 120, 0.1);
   `,
@@ -100,6 +104,10 @@ const ComponentMixin = {
     border: solid 1px rgba(109, 114, 120, 0.1);
     background-color: rgba(0, 0, 0, 0.04);
     color: rgba(0, 0, 0, 0.25);
+  `,
+  TextInputOutline: css`
+    color: ${MAIN_COLOR_DARK};
+    border: solid 1px ${MAIN_COLOR_DARK};
   `,
 };
 

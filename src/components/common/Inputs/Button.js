@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // 일반 입력
-// variant : normal, disable, able
+// variant : normal, disable, able, outline
 //
 const SButton = ({ className, variant = "normal", text, ...props }) => {
   return (
@@ -31,4 +31,5 @@ const Button = styled.button`
   ${(props) => props.variant === "normal" && props.theme.ButtonNormal}
   ${(props) => props.variant === "able" && props.theme.ButtonAble}
   ${(props) => props.variant === "disable" && props.theme.ButtonDisable}
+  ${(props) => props.variant === "outline" && props.theme.ButtonOutline}
 `;

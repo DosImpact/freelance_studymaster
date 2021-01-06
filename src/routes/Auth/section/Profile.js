@@ -9,50 +9,89 @@ import {
 } from "components/common/Inputs/index";
 
 const Login = () => {
-  // const formik = useFormik({
-  //   initialValues: { email: "", ph: "", phValid: "", nickname: "" },
-  //   onSubmit: (data, { setSubmitting }) => {
-  //     setSubmitting(true);
-  //     console.log(data);
-  //     setSubmitting(false);
-  //   },
-  //   validationSchema: Yup.object().shape({
-  //     email: Yup.string()
-  //       .email("* 이메일 주소를 확인해주세요")
-  //       .required("* 이메일 주소가 필요합니다."),
-  //     ph: Yup.string().required("* 전화 번호가 필요합니다."),
-  //     phValid: Yup.string(),
-  //     nickname: Yup.string().required("* 닉네임이 필요합니다."),
-  //   }),
-  // });
-
   return (
     <Container>
       <InnerContainer>
         <div className="wrapper">
+          <div className="later">나중에 하기</div>
           <form className="signInForm">
             <div className="title">프로필 등록</div>
 
-            <div className="section score">
+            <div className="section scoreSection">
               <div className="name">
                 공인 영어 점수<span className="mainColor"> *</span>
               </div>
+
               <div className="row">
                 <DropDownButton
                   variant="normal"
-                  className="button"
-                  text="공인 영어"
+                  className="dropDownButton"
+                  text="종류 선택"
                 >
                   <DropDownButton.Item>TOEIC</DropDownButton.Item>
                   <DropDownButton.Item>TOEIC Speaking</DropDownButton.Item>
                   <DropDownButton.Item>TEPS</DropDownButton.Item>
                 </DropDownButton>
-
                 <TextInput
                   className="textinput"
-                  placeholder="전화번호를 인증해주세요"
-                  id="ph"
+                  placeholder="점수를 입력해주세요"
                 />
+                <img
+                  className="deleteButton"
+                  alt="xbox.png"
+                  src={process.env.PUBLIC_URL + "/assets/icons/xbox.png"}
+                ></img>
+              </div>
+
+              <div className="row">
+                <DropDownButton
+                  variant="normal"
+                  className="dropDownButton"
+                  text="종류 선택"
+                >
+                  <DropDownButton.Item>TOEIC</DropDownButton.Item>
+                  <DropDownButton.Item>TOEIC Speaking</DropDownButton.Item>
+                  <DropDownButton.Item>TEPS</DropDownButton.Item>
+                </DropDownButton>
+                <TextInput
+                  className="textinput"
+                  placeholder="점수를 입력해주세요"
+                />
+                <img
+                  className="deleteButton"
+                  alt="xbox.png"
+                  src={process.env.PUBLIC_URL + "/assets/icons/xbox.png"}
+                ></img>
+              </div>
+
+              <div className="row">
+                <DropDownButton
+                  variant="normal"
+                  className="dropDownButton"
+                  text="TOEIC"
+                >
+                  <DropDownButton.Item>TOEIC</DropDownButton.Item>
+                  <DropDownButton.Item>TOEIC Speaking</DropDownButton.Item>
+                  <DropDownButton.Item>TEPS</DropDownButton.Item>
+                </DropDownButton>
+                <TextInput
+                  className="textinput"
+                  placeholder="점수를 입력해주세요"
+                />
+                <img
+                  className="deleteButton"
+                  alt="xbox.png"
+                  src={process.env.PUBLIC_URL + "/assets/icons/xbox.png"}
+                ></img>
+              </div>
+
+              <div className="row addExamRow">
+                <Button
+                  className="addExamButton"
+                  variant="disable"
+                  text=" + 시험추가"
+                  type="submit"
+                ></Button>
               </div>
             </div>
 
@@ -78,24 +117,28 @@ const Container = styled.div`
   margin: 120px 0px;
 `;
 
-const BlueLink = styled(Link)`
-  color: #0091ff;
-  text-decoration: underline;
-`;
-
 const InnerContainer = styled.div`
   margin: 0 auto;
   max-width: 468px;
   padding: 0 30px;
   & .wrapper {
+    .later {
+      ${(props) => props.theme.ColorMain};
+      text-decoration: underline;
+      margin-bottom: 11px;
+      text-align: end;
+    }
     .title {
       font-size: 40px;
       font-weight: 500;
       color: #000000;
     }
+    /* 섹션 공통 CSS  */
     .section {
       margin-top: 60px;
+
       .name {
+        font-weight: 500;
         font-size: 22px;
         letter-spacing: -0.22px;
         color: #000000;
@@ -103,6 +146,7 @@ const InnerContainer = styled.div`
       .row {
         margin-top: 12px;
         ${(props) => props.theme.flexHC};
+
         .textinput {
         }
         .button {
@@ -116,14 +160,32 @@ const InnerContainer = styled.div`
         }
       }
     }
-    .score {
-      .textinput {
-        width: 300px;
+    /* 섹션 특수 CSS */
+    .scoreSection {
+      .dropDownButton {
+        width: 150px;
+        margin-right: 14px;
       }
-      .button {
-        width: 96px;
+      .textinput {
+        width: 208px;
+        margin-right: 14px;
+      }
+      .deleteButton {
+        width: 22px;
+        height: auto;
+        cursor: pointer;
+      }
+      .addExamRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        .addExamButton {
+          width: 96px;
+          height: 36px;
+        }
       }
     }
+
     .submitContent {
       ${(props) => props.theme.flexVC};
       justify-content: center;

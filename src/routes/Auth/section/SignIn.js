@@ -45,7 +45,7 @@ const Login = () => {
                   onBlur={formik.handleBlur}
                 />
                 <Button
-                  variant="normal"
+                  variant="outline"
                   className="button"
                   type="button"
                   text="인증번호 받기"
@@ -171,6 +171,7 @@ const InnerContainer = styled.div`
     .section {
       margin-top: 60px;
       .name {
+        font-weight: 500;
         font-size: 22px;
         letter-spacing: -0.22px;
         color: #000000;

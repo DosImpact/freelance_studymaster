@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // 일반 입력
-// variant : normal, disable, able
+// variant : normal, disable, able, outline
 
 const TextInput = ({ className, variant = "normal", children, ...props }) => {
   return (

@@ -20,6 +20,21 @@ export default createGlobalStyle`
         outline:none;
     }
     
+    input[type="checkbox"]:after {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      top: 1px;
+      left: 4px;
+    }
+
     input[type="checkbox"]:before {
         content: "";
         display: block;
@@ -28,26 +43,28 @@ export default createGlobalStyle`
         height: 20px;
         top: -3px;
         left: -3px;
-        background-color: #bbbbbb;
+        background-color: #d8d8d8;
         border-radius: 50%;
-      }
-      input[type="checkbox"]:checked:before {
-        background-color: ${(props) => props.theme.MainColor3};
-      }
-      input[type="checkbox"]:checked:after {
-        content: "";
-        display: block;
-        width: 4px;
-        height: 8px;
-        border: solid white;
-        border-width: 0 2px 2px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        position: absolute;
-        top: 1px;
-        left: 4px;
-      }
+    }
+
+    input[type="checkbox"]:checked:before {
+      background-color: ${(props) => props.theme.MainColor3};
+    }
+ 
+    input[type="checkbox"]:checked:after {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      top: 1px;
+      left: 4px;
+    }
 
     .mainColor{
         ${Theme.ColorMain};

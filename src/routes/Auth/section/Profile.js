@@ -95,17 +95,55 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="section">
+            <div className="section purposSection">
               <div className="name"></div>
 
               <div className="row">
-                <input
-                  type="checkbox"
-                  id="testName"
-                  name="testName"
-                  value="lalala"
-                ></input>
-                <label htmlFor="testName">lallala</label>
+                <div className="checkBoxContainer">
+                  <input
+                    className="checkBoxInput"
+                    type="checkbox"
+                    id="op1"
+                  ></input>
+                  <label className="checkBoxLabel" htmlFor="op1">
+                    취업 준비
+                  </label>
+                </div>
+
+                <div className="checkBoxContainer">
+                  <input
+                    className="checkBoxInput"
+                    type="checkbox"
+                    id="op2"
+                  ></input>
+                  <label className="checkBoxLabel" htmlFor="op2">
+                    유학 준비
+                  </label>
+                </div>
+
+                <div className="checkBoxContainer">
+                  <input
+                    className="checkBoxInput"
+                    type="checkbox"
+                    id="op3"
+                  ></input>
+                  <label className="checkBoxLabel" htmlFor="op3">
+                    영어 실력 유지 및 향상
+                  </label>
+                </div>
+
+                <div className="checkBoxContainer">
+                  <div className="checkBoxRow">
+                    <input
+                      className="checkBoxInput"
+                      type="checkbox"
+                      id="op3"
+                    ></input>
+                    <label className="checkBoxLabel" htmlFor="op3">
+                      영어 실력 유지 및 향상
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -200,6 +238,30 @@ const InnerContainer = styled.div`
         .addExamButton {
           width: 96px;
           height: 36px;
+        }
+      }
+    }
+    .purposSection {
+      .row {
+        display: flex;
+        flex-flow: column nowrap;
+        border: solid #e4e4e4;
+        border-width: 1px 1px 0px 1px;
+        .checkBoxContainer {
+          width: 100%;
+          min-height: 46px;
+          ${(props) => props.theme.flexHC}
+          border-bottom: 1px solid #e4e4e4;
+          padding-left: 18px;
+          .checkBoxInput {
+          }
+          input.checkBoxInput[type="checkbox"]:checked + label {
+            color: black;
+          }
+          .checkBoxLabel {
+            margin-left: 5px;
+            color: #bbbbbb;
+          }
         }
       }
     }

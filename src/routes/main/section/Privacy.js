@@ -54,5 +54,6 @@ const InnerContainer = styled.div`
   .content {
     font-size: 22px;
     white-space: pre-wrap;
+    line-height: 1.3;
   }
 `;

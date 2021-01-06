@@ -1,5 +1,5 @@
 import React from "react";
-import GridCard from "./section/GridCard";
+import GridMainCard from "./section/GridMainCard";
 import Panel from "./section/Panel";
 import Privacy from "./section/Privacy";
 
@@ -25,15 +25,15 @@ const MainPresenter = () => {
       <Panel />
 
       {/* Section Card 영역 + 전체보기 */}
-      <GridCard
-        dummyData={dummyData}
+      <GridMainCard
+        cardItems={dummyData}
         title={"스터디마스터 100% 활용하기 ✍🏼"}
         more={"전체보기"}
         moreRoute={`${process.env.PUBLIC_URL}+"/`}
       />
       {/* Section Card 영역 */}
-      <GridCard
-        dummyData={Array.from([
+      <GridMainCard
+        cardItems={Array.from([
           ...dummyData,
           ...dummyData,
           ...dummyData,

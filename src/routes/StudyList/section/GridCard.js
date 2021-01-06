@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const GridCard = ({ dummyData, title, more, moreRoute }) => {
+const GridCard = ({ CardItems, title, more, moreRoute }) => {
   return (
     <Container>
       <InnerContainer>
@@ -14,7 +14,7 @@ const GridCard = ({ dummyData, title, more, moreRoute }) => {
         </div>
 
         <div className="gridContainer">
-          {Array.from(dummyData).map((e, idx) => {
+          {Array.from(CardItems).map((e, idx) => {
             return (
               <div className="gridItem" key={idx}>
                 <div className="card">

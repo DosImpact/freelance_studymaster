@@ -2,7 +2,7 @@ import React from "react";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-import MainContainer from "./routes/main/MainContainer";
+import MainContainer from "./routes/Main/MainContainer";
 import AuthContainer from "routes/Auth/AuthContainer";
 import MyPageContainer from "routes/MyPage/MyPageContainer";
 import MyStudyContainer from "routes/MyStudy/MyStudyContainer";

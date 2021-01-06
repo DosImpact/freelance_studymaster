@@ -1,8 +1,8 @@
 import React from "react";
-import StudyPostPresenter from "routes/StudyPost/StudyPostPresenter";
+import StudyPostPresenter from "routes/studyPost/StudyPostPresenter";
 
 const StudyPostContainer = () => {
-    return <StudyPostPresenter />;
+  return <StudyPostPresenter />;
 };
 
 export default StudyPostContainer;

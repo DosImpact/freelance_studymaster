@@ -1,8 +1,8 @@
 import React from "react";
-import AuthPresenter from "routes/Auth/AuthPresenter";
+import AuthPresenter from "routes/auth/AuthPresenter";
 
 const AuthContainer = () => {
-    return <AuthPresenter />;
+  return <AuthPresenter />;
 };
 
 export default AuthContainer;

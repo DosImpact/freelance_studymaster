@@ -5,7 +5,7 @@ import {
   Button,
   TextInput,
   DropDownButton,
-} from "components/common/Inputs/index";
+} from "components/common/inputs/index";
 
 const Profile = () => {
   return (

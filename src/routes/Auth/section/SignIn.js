@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import { Link } from "react-router-dom";
-import { Button, TextInput } from "components/common/Inputs/index";
+import { Button, TextInput } from "components/common/inputs/index";
 
 const Login = () => {
   const formik = useFormik({

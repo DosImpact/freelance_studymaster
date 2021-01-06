@@ -1,8 +1,8 @@
 import React from "react";
-import StudyListPresenter from "routes/StudyList/StudyListPresenter";
+import StudyListPresenter from "routes/studyList/StudyListPresenter";
 
 const StudyListContainer = () => {
-    return <StudyListPresenter />;
+  return <StudyListPresenter />;
 };
 
 export default StudyListContainer;

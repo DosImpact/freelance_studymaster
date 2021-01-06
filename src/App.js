@@ -2,12 +2,12 @@ import React from "react";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
-import MainContainer from "routes/Main/MainContainer";
-import AuthContainer from "routes/Auth/AuthContainer";
-import MyPageContainer from "routes/MyPage/MyPageContainer";
-import MyStudyContainer from "routes/MyStudy/MyStudyContainer";
-import StudyListContainer from "routes/StudyList/StudyListContainer";
-import StudyPostContainer from "routes/StudyPost/StudyPostContainer";
+import MainContainer from "routes/main/MainContainer";
+import AuthContainer from "routes/auth/AuthContainer";
+import MyPageContainer from "routes/myPage/MyPageContainer";
+import MyStudyContainer from "routes/myStudy/MyStudyContainer";
+import StudyListContainer from "routes/studyList/StudyListContainer";
+import StudyPostContainer from "routes/studyPost/StudyPostContainer";
 
 // Route - 디자인 순서대로 작성함.
 

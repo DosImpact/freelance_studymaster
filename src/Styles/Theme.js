@@ -144,10 +144,19 @@ const Theme = {
   MainColor2: `${MAIN_COLOR}`,
   MainColor3: `${MAIN_COLOR_DARK}`,
 
+  OrangeColor1: `${ORANGE_COLOR_LIGHT}`,
+  OrangeColor2: `${ORANGE_COLOR}`,
+  OrangeColor3: `${ORANGE_COLOR_DARK}`,
+
+  BlueColor1: `${BLUE_COLOR_LIGHT}`,
+  BlueColor2: `${BLUE_COLOR}`,
+  BlueColor3: `${BLUE_COLOR_DARK}`,
+
   GreyColor1: `${GREY_COLOR_LIGHT}`,
   GreyColor2: `${GREY_COLOR}`,
   GreyColor3: `${GREY_COLOR_DARK}`,
   ColorPlaceHolder: `#bbbbbb`,
+
   /* study master theme color */
   orangeColor: `${ORANGE_COLOR}`,
   blueColor: `${BLUE_COLOR}`,

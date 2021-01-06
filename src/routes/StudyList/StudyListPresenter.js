@@ -4,22 +4,62 @@ import GridCard from "./section/GridCard";
 const StudyListPresenter = () => {
   const dummyDatas = [
     {
-      src: `${process.env.PUBLIC_URL}/assets/cardImg1.png`,
-      title: "스터디 모임에서 간단히 헬퍼와 토픽을 지정해보세…",
-      subTitle:
-        "스터디마스터에서는, 모임을 찾는 것은 물론 각 헬퍼를 지정하고 토픽을 추가할 수 있어요. 클릭 몇번으로, 시간을 절약하는 꿀팁을 공…  ",
+      imgSrc: `${process.env.PUBLIC_URL}/assets/cardImg2.png`,
+      recommand: "👍🏼 추천",
+      title: "공무원/어휘2000 향상...",
+      subTitle: "격주 금, 토, 일 오후 3시 - 오후 6시 ",
+      tag: "#공무원영어 #스터디모임 #어휘",
+      status: "모집중",
+      level: "Lv.4 이상 추천",
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/cardImg2.png`,
-      title: "스터디 모임에서 간단히 헬퍼와 토픽을 지정해보세…",
-      subTitle:
-        "스터디마스터에서는, 모임을 찾는 것은 물론 각 헬퍼를 지정하고 토픽을 추가할 수 있어요. 클릭 몇번으로, 시간을 절약하는 꿀팁을 공…  ",
+      imgSrc: `${process.env.PUBLIC_URL}/assets/cardImg3.png`,
+      recommand: "👍🏼 추천",
+      title: "김영편입 AT(상)",
+      subTitle: "격주 금, 토, 일 오후 3시 - 오후 6시 ",
+      tag: "#김영편입 #편입생스터디 #김영상반",
+      status: "모집중",
+      level: "Lv.4 이상 추천",
+    },
+    {
+      imgSrc: `${process.env.PUBLIC_URL}/assets/cardImg4.png`,
+      recommand: "👍🏼 추천",
+      title: "강남TNC 독해력 강화 스터디 ",
+      subTitle: "격주 금, 토, 일 오후 3시 - 오후 6시 ",
+      tag: "#공무원영어 #스터디모임 #어휘",
+      status: "모집중",
+      level: "Lv.4 이상 추천",
+    },
+    {
+      imgSrc: `${process.env.PUBLIC_URL}/assets/cardImg4.png`,
+      recommand: "👍🏼 추천",
+      title: "강남TNC 독해력 강화 스터디 .",
+      subTitle: "격주 금, 토, 일 오후 3시 - 오후 6시 ",
+      tag: "#TNC2기 #강남스터디 #독해",
+      status: "모집중",
+      level: "Lv.4 이상 추천",
     },
   ];
 
   return (
     <div>
-      <GridCard CardItems={dummyDatas} />
+      <GridCard CardItems={dummyDatas} title="주말도 알차게" />
+
+      <GridCard
+        CardItems={dummyDatas}
+        title="직장인들 모여라"
+        more="전체보기"
+      />
+
+      <GridCard CardItems={dummyDatas} title="랜선 모임" more="전체보기" />
+
+      <GridCard
+        CardItems={dummyDatas}
+        title="진행중인 스터디"
+        more="전체보기"
+      />
+
+      <GridCard CardItems={dummyDatas} title="모든 모임 보기" more="전체보기" />
     </div>
   );
 };

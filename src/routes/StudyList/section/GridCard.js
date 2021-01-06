@@ -18,9 +18,17 @@ const GridCard = ({ CardItems, title, more, moreRoute }) => {
             return (
               <div className="gridItem" key={idx}>
                 <div className="card">
-                  <img src={e?.src} className="cardImg" alt="cardImg" />
-                  <div className="cardTitle">{e?.title}</div>
+                  <img src={e?.imgSrc} className="cardImg" alt="cardImg" />
+                  <div className="cardTitle">
+                    <span className="cardRecommand">{e?.recommand}</span>
+                    {e?.title}
+                  </div>
                   <div className="cardSubTitle">{e?.subTitle}</div>
+                  <div className="cardTag">{e?.tag}</div>
+                  <div className="cardRow">
+                    <div className="cardStatus">{e?.status}</div>
+                    <div className="cardLevel">{e?.level}</div>
+                  </div>
                 </div>
               </div>
             );
@@ -63,25 +71,69 @@ const InnerContainer = styled.div`
   & .gridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
+    grid-gap: 20px;
     .gridItem {
       .card {
       }
       .cardImg {
         width: 600px;
-        height: 320px;
+        height: 261px;
+        object-fit: cover;
       }
       .cardTitle {
+        ${(props) => props.theme.flexHC};
         margin-top: 24px;
         font-size: 28px;
         font-weight: 500;
         letter-spacing: -0.28px;
+        .cardRecommand {
+          display: inline-block;
+          ${(props) => props.theme.centering};
+          width: 90px;
+          height: 40px;
+          border: ${(props) => props.theme.borderMain};
+          opacity: 0.92;
+          font-family: NotoSansCJKkr;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: -0.18px;
+          text-align: center;
+          color: #fa6400;
+          margin-right: 10px;
+        }
       }
       .cardSubTitle {
         margin-top: 14px;
         opacity: 0.8;
         line-height: 1.65;
         letter-spacing: -0.23px;
+      }
+      .cardTag {
+        margin-top: 12px;
+        color: ${(props) => props.theme.MainColor2};
+      }
+      .cardRow {
+        ${(props) => props.theme.flexH}
+        justify-content:space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .cardStatus {
+          ${(props) => props.theme.centering}
+          height: 38px;
+          margin: 14px 392px 0 0;
+          padding: 4px 20px 7px;
+          border-radius: 20px;
+          border: solid 0.5px rgba(255, 255, 255, 0.4);
+          background-color: ${(props) => props.theme.MainColor3};
+          color: #ffffff;
+        }
+        .cardLevel {
+          font-family: AppleSDGothicNeo;
+          font-weight: 600;
+          letter-spacing: -0.2px;
+          text-align: right;
+          color: #c0c0c0;
+        }
       }
     }
   }

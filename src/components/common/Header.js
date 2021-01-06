@@ -15,7 +15,7 @@ const Header = () => {
             ></img>
           </Link>
           <ul className="navItem">
-            <Link to={process.env.PUBLIC_URL + "/search"}>
+            <Link to={process.env.PUBLIC_URL + "/studylist"}>
               <li className="itemList">스터디 찾기</li>
             </Link>
             <Link to={process.env.PUBLIC_URL + "/mystudy"}>
@@ -44,8 +44,7 @@ const Container = styled.div`
 
 const InnerContainer = styled.div`
   margin: 0 auto;
-  max-width: 1130px;
-  padding: 0 30px;
+  max-width: 1240px;
   width: 100%;
   height: 100%;
   & .row {

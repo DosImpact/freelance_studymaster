@@ -95,6 +95,20 @@ const Login = () => {
               </div>
             </div>
 
+            <div className="section">
+              <div className="name"></div>
+
+              <div className="row">
+                <input
+                  type="checkbox"
+                  id="testName"
+                  name="testName"
+                  value="lalala"
+                ></input>
+                <label htmlFor="testName">lallala</label>
+              </div>
+            </div>
+
             <div className="submitContent">
               <Button
                 className="button"
@@ -135,8 +149,12 @@ const InnerContainer = styled.div`
     }
     /* 섹션 공통 CSS  */
     .section {
-      margin-top: 60px;
+      input[type="checkbox"] {
+        position: relative;
+        cursor: pointer;
+      }
 
+      margin-top: 60px;
       .name {
         font-weight: 500;
         font-size: 22px;

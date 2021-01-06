@@ -15,16 +15,16 @@ const Header = () => {
             ></img>
           </Link>
           <ul className="navItem">
-            <Link to="/search">
+            <Link to={process.env.PUBLIC_URL + "/search"}>
               <li className="itemList">스터디 찾기</li>
             </Link>
-            <Link to="/mystudy">
+            <Link to={process.env.PUBLIC_URL + "/mystudy"}>
               <li className="itemList">내 스터디</li>
             </Link>
-            <Link to="/auth">
+            <Link to={process.env.PUBLIC_URL + "/auth"}>
               <li className="itemList">회원가입</li>
             </Link>
-            <Link to="/auth">
+            <Link to={process.env.PUBLIC_URL + "/auth"}>
               <li className="itemList mainColor w7">로그인</li>
             </Link>
           </ul>
@@ -39,6 +39,7 @@ export default Header;
 const Container = styled.div`
   height: 72px;
   ${(props) => props.theme.boxShadow};
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 `;
 
 const InnerContainer = styled.div`

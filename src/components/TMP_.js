@@ -17,6 +17,6 @@ const Container = styled.div``;
 
 const InnerContainer = styled.div`
   margin: 0 auto;
-  max-width: 1130px;
+  max-width: 1220px;
   padding: 0 30px;
 `;
